@@ -1,1 +1,237 @@
+Engineering Decision Records (EDRs)
+Purpose
 
+This document records every significant engineering decision made during the development of Project Disc.
+
+The goal is to preserve not only what decisions were made, but why they were made.
+
+Each decision should include:
+
+Context
+Decision
+Alternatives considered
+Reasoning
+Consequences
+Status
+
+Future contributors should be able to understand the evolution of Project Disc without relying on conversations, memory, or assumptions.
+
+Decision Template
+# EDR-XXXX
+
+Date:
+
+Status:
+- Proposed
+- Accepted
+- Deprecated
+- Replaced
+
+Category:
+- Mechanical
+- Electrical
+- Software
+- UI
+- Audio
+- Manufacturing
+- Documentation
+
+Decision
+
+Context
+
+Alternatives Considered
+
+Pros
+
+Cons
+
+Consequences
+
+Future Notes
+EDR-0001
+
+Date: July 14, 2026
+
+Status: Accepted
+
+Category: Audio
+
+Decision
+
+Project Disc will not include built-in speakers.
+
+Context
+
+The original concept considered integrated speakers.
+
+After evaluating the tradeoffs, it was determined that built-in speakers would conflict with the project's goals of high-fidelity audio, durability, repairability, and efficient use of internal space.
+
+Alternatives Considered
+Mono speaker
+Stereo speakers
+Removable speaker module
+No speakers
+Pros
+More room for battery
+More room for DAC and audio circuitry
+Better thermal layout
+Lower power consumption
+Cleaner internal design
+Better audio quality through headphones and external systems
+Cons
+Cannot play audio without external equipment
+Consequences
+
+Project Disc becomes a dedicated personal listening device.
+
+Future docking accessories may provide speaker functionality.
+
+EDR-0002
+
+Category: Mechanical
+
+Decision
+
+Project Disc shall prioritize durability over minimum thickness.
+
+Context
+
+Many modern electronics achieve thinness by sacrificing structural strength.
+
+Project Disc aims to feel like a durable tool rather than a fragile gadget.
+
+Decision
+
+The enclosure should prioritize:
+
+Structural rigidity
+Impact resistance
+Long-term reliability
+
+Minor increases in thickness are acceptable when they improve durability or repairability.
+
+EDR-0003
+
+Category: Product Philosophy
+
+Decision
+
+Project Disc is a modular ecosystem rather than a single product.
+
+Consequences
+
+Every software module should be reusable.
+
+Every future device should share:
+
+UI
+Communication protocol
+Design language
+Documentation standards
+EDR-0004
+
+Category: Repairability
+
+Decision
+
+Glue shall not be used for serviceable components unless there is no practical alternative.
+
+Components Covered
+Display
+Battery
+Main board
+Buttons
+Rotary encoder
+Exceptions
+
+Display laminations, battery cells, and other manufacturing processes that require adhesives may remain as supplied by the manufacturer.
+
+📁 docs/
+File: DESIGN_PRINCIPLES.md
+
+This is something companies like Apple, Framework, and Nothing all have internally, even if they don't publish it. It keeps the entire project focused.
+
+The Ten Commandments of Project Disc
+1. Music Comes First
+
+Every design decision should improve the listening experience.
+
+2. Durability Over Thinness
+
+A strong device is better than a fragile one.
+
+3. Repair Before Replace
+
+If something breaks, it should be fixable.
+
+4. Modularity Matters
+
+Components should be replaceable and reusable whenever practical.
+
+5. Simplicity Wins
+
+The simplest reliable solution is usually the best one.
+
+6. Every Part Has a Purpose
+
+Avoid unnecessary hardware, software, and visual clutter.
+
+7. Document Everything
+
+If it exists, document it.
+
+If it changes, update the documentation.
+
+8. Respect the User's Time
+
+Fast boot.
+
+Responsive controls.
+
+Clear navigation.
+
+Easy repairs.
+
+Straightforward updates.
+
+9. Build for the Long Term
+
+Assume the device will still be used five to ten years from now.
+
+10. Build Something You're Proud to Carry
+
+If we wouldn't use it every day, it doesn't belong in Project Disc.
+
+📁 docs/
+File: PROJECT_GLOSSARY.md
+
+Since this project is going to grow, we should define our terminology early.
+
+Term	Definition
+Project Disc	The overall ecosystem and project.
+Disc Core	The shared software platform used by all Project Disc devices.
+Disc Player	The portable digital audio player (DAP).
+Disc Display	The companion display that mirrors playback information.
+Disc Car	The in-vehicle companion display.
+Module	A replaceable hardware or software component.
+EDR	Engineering Decision Record.
+BOM	Bill of Materials.
+Prototype	An experimental hardware revision used for development.
+Generation	A major hardware revision (Gen 1, Gen 2, etc.).
+Revision	A smaller update within a generation (Rev A, Rev B, etc.).
+One Big Idea I'd Like to Add
+
+I want to borrow one more concept from Framework—not just repairability, but repairability by design.
+
+Let's make this an official engineering requirement:
+
+No component should become inaccessible because of another unrelated component.
+
+Examples:
+
+You shouldn't have to remove the display to replace the battery.
+You shouldn't have to remove the battery to replace a button if it can be avoided.
+You shouldn't have to remove the DAC to access the USB-C board.
+
+This will influence how we arrange the internals from day one. It might make the enclosure a few millimeters thicker, but it'll make the device dramatically easier to repair and upgrade. I think that's a tradeoff worth making, and it fits perfectly with the vision we've been building.
