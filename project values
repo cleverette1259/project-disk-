@@ -1,0 +1,54 @@
+The Ten Commandments of Project Disc
+1. Music Comes First
+
+Every design decision should improve the listening experience.
+
+2. Durability Over Thinness
+
+A strong device is better than a fragile one.
+
+3. Repair Before Replace
+
+If something breaks, it should be fixable.
+
+4. Modularity Matters
+
+Components should be replaceable and reusable whenever practical.
+
+5. Simplicity Wins
+
+The simplest reliable solution is usually the best one.
+
+6. Every Part Has a Purpose
+
+Avoid unnecessary hardware, software, and visual clutter.
+
+7. Document Everything
+
+If it exists, document it.
+
+If it changes, update the documentation.
+
+8. Respect the User's Time
+
+Fast boot.
+
+Responsive controls.
+
+Clear navigation.
+
+Easy repairs.
+
+Straightforward updates.
+
+9. Build for the Long Term
+
+Assume the device will still be used five to ten years from now.
+
+10. Build Something You're Proud to Carry
+
+If we wouldn't use it every day, it doesn't belong in Project Disc.
+
+11. Repairability by Design
+
+Repairability shall be considered during the initial design of every component rather than added as an afterthought.
